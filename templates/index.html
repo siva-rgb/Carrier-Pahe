@@ -14,12 +14,12 @@
     <title>Carrire Page</title>
   </head>
   <body>
-
+    {% include 'nav.html' %}
     <div id="container" class="px-2 ms-1">
         <h1>Carrier Page</h1>
         <!-- <img  src="img1.jpg" id="banner" class="img-fluid" alt=""> -->
-        <img src="/static/img1.jpg" id="banner" class="img-fluid" alt="" width="100" height="100">
-        <h2 class="text-center">About Us</h2>
+        <img src="/static/img1.jpg" id="banner" class="img-fluid shadow-sm border-bottom" alt="" width="100" height="100">
+        <h2 class="text-center mt-2">About Us</h2>
         <p class="lead fs-6">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit
           consectetur sit commodi necessitatibus nesciunt veniam ad sint, iusto
@@ -31,20 +31,22 @@
         </p>
           
   </div>
-  <div id="container" class="p-3 ms-1">
-    <h2 class="text-center">Job Openings</h2>
+  <h2 class="text-center">Job Openings</h2>
+  <div id="container" style="margin-left:170px">
 
+    
         {% for job in jobs %}
 
         {% include 'jobItem.html' %}
-
         {% endfor %}
     
   </div>
 
     <div class="text-center mt-4">
-      <button class="btn btn-primary btn-lg">Cotact Us</button>
+      <a href="mailto:hr.executive@prolific.com?subject=Question%20Regarding%20Job%20Openings&body=My%20name%3A%20%3CYour%20name%3E%0D%0A%0D%0AQuestion%3A%20%3CEnter%20your%20Questions%3F" class="btn btn-primary btn-lg">Cotact Us</a>
     </div>
+    
+    {% include 'footer.html' %}
 
   </body>
 </html>
